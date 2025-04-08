@@ -15,7 +15,7 @@
 		<RepositoryUrl>https://github.com/NetDevPack/SimpleMediator</RepositoryUrl>
 		<RepositoryType>Public</RepositoryType>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<Version>1.0.0</Version>
+		<Version>1.1.0</Version>
 		<Title>NetDevPack.SimpleMediator</Title>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageTags>Mediator, MediatR</PackageTags>
