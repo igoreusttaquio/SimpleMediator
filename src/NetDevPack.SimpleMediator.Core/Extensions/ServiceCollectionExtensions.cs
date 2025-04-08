@@ -26,7 +26,7 @@ namespace NetDevPack.SimpleMediator.Core.Extensions
 
         private static Assembly[] ResolveAssemblies(object[] args)
         {
-            // Nenhum argumento → retorna todos os carregados
+            // Return ALL
             if (args == null || args.Length == 0)
             {
                 return AppDomain.CurrentDomain
@@ -35,11 +35,11 @@ namespace NetDevPack.SimpleMediator.Core.Extensions
                     .ToArray();
             }
 
-            // Todos os args são Assembly
+            // Return all informed (same behavior as above)
             if (args.All(a => a is Assembly))
                 return args.Cast<Assembly>().ToArray();
 
-            // Todos os args são string (prefixos)
+            // Return filtered by namespace (most performatic)
             if (args.All(a => a is string))
             {
                 var prefixes = args.Cast<string>().ToArray();
@@ -52,7 +52,7 @@ namespace NetDevPack.SimpleMediator.Core.Extensions
                     .ToArray();
             }
 
-            throw new ArgumentException("Parâmetros inválidos para AddSimpleMediator(). Use: nenhum argumento, Assembly[], ou strings de prefixo.");
+            throw new ArgumentException("Invalid parameters for AddSimpleMediator(). Use: no arguments, Assembly[], or prefix strings.");
         }
 
 
