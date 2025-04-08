@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35919.96
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleApp", "SampleApp.csproj", "{0035CB67-ADC7-446D-9358-4B84B1E8C153}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project Reference", "Project Reference", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPack.SimpleMediator.Core", "..\..\src\NetDevPack.SimpleMediator.Core\NetDevPack.SimpleMediator.Core.csproj", "{EFB444B7-6825-50E8-1CCC-A7D05BC852FC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0035CB67-ADC7-446D-9358-4B84B1E8C153}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0035CB67-ADC7-446D-9358-4B84B1E8C153}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0035CB67-ADC7-446D-9358-4B84B1E8C153}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0035CB67-ADC7-446D-9358-4B84B1E8C153}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFB444B7-6825-50E8-1CCC-A7D05BC852FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFB444B7-6825-50E8-1CCC-A7D05BC852FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFB444B7-6825-50E8-1CCC-A7D05BC852FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFB444B7-6825-50E8-1CCC-A7D05BC852FC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EFB444B7-6825-50E8-1CCC-A7D05BC852FC} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BFFAFD81-64E9-4E48-B6AD-52AB2CBF45D4}
+	EndGlobalSection
+EndGlobal
