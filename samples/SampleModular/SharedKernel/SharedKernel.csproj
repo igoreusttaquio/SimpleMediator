@@ -4,6 +4,6 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\NetDevPack.SimpleMediator.Core\NetDevPack.SimpleMediator.Core.csproj" />
+    <PackageReference Include="NetDevPack.SimpleMediator" Version="1.0.0" />
   </ItemGroup>
 </Project>

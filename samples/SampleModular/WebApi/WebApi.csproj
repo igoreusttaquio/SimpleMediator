@@ -8,7 +8,6 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="8.1.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\NetDevPack.SimpleMediator.Core\NetDevPack.SimpleMediator.Core.csproj" />
     <ProjectReference Include="..\Modules\Cadastro\Cadastro.csproj" />
     <ProjectReference Include="..\Modules\Financeiro\Financeiro.csproj" />
     <ProjectReference Include="..\Modules\Crm\Crm.csproj" />

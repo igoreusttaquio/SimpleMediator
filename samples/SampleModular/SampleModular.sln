@@ -17,10 +17,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedKernel", "SharedKerne
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{F1320D1E-3342-4F4B-A827-121F3D8AF2E5}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Project Reference", "0 - Project Reference", "{D2B22C85-E4EE-4F9D-9C22-4D3A9B908D71}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPack.SimpleMediator.Core", "..\..\src\NetDevPack.SimpleMediator.Core\NetDevPack.SimpleMediator.Core.csproj", "{EFB444B7-6825-50E8-1CCC-A7D05BC852FC}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,10 +43,6 @@ Global
 		{C71DB168-5872-1C86-3B8B-5FDF83D4892C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C71DB168-5872-1C86-3B8B-5FDF83D4892C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C71DB168-5872-1C86-3B8B-5FDF83D4892C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EFB444B7-6825-50E8-1CCC-A7D05BC852FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EFB444B7-6825-50E8-1CCC-A7D05BC852FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EFB444B7-6825-50E8-1CCC-A7D05BC852FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EFB444B7-6825-50E8-1CCC-A7D05BC852FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,7 +52,6 @@ Global
 		{FE33E0B0-F476-75B7-FF47-FCA4908E9C14} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{51818623-018A-D5AD-D259-C0B306E58BFE} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{C71DB168-5872-1C86-3B8B-5FDF83D4892C} = {F1320D1E-3342-4F4B-A827-121F3D8AF2E5}
-		{EFB444B7-6825-50E8-1CCC-A7D05BC852FC} = {D2B22C85-E4EE-4F9D-9C22-4D3A9B908D71}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DE2A29F1-BA6D-4834-8371-B0BDC4724822}
