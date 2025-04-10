@@ -1,4 +1,4 @@
-namespace NetDevPack.SimpleMediator.Core.Interfaces
+namespace NetDevPack.SimpleMediator
 {
 
     public interface INotification { }

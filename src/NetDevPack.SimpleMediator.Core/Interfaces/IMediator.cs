@@ -1,7 +1,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace NetDevPack.SimpleMediator.Core.Interfaces
+namespace NetDevPack.SimpleMediator
 {
 
     public interface IMediator

@@ -1,11 +1,9 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using NetDevPack.SimpleMediator.Core.Implementation;
-using NetDevPack.SimpleMediator.Core.Interfaces;
 using System;
 using System.Linq;
 using System.Reflection;
 
-namespace NetDevPack.SimpleMediator.Core.Extensions
+namespace NetDevPack.SimpleMediator
 {
 
     public static class ServiceCollectionExtensions
