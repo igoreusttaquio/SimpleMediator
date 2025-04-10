@@ -1,10 +1,9 @@
-using NetDevPack.SimpleMediator.Core.Interfaces;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace NetDevPack.SimpleMediator.Core.Implementation
+namespace NetDevPack.SimpleMediator
 {
 
     public class Mediator : IMediator
