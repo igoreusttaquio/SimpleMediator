@@ -5,17 +5,17 @@
 		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
 		<AssemblyName>NetDevPack.SimpleMediator</AssemblyName>
 		<RootNamespace>NetDevPack.SimpleMediator</RootNamespace>
-		<PackageId>NetDevPack.SimpleMediator</PackageId>
-		<Authors>Eduardo Pires</Authors>
-		<Company>desenvolvedor.io</Company>
-		<Description>Simple mediator implementation in .NET, In-process messaging with no dependencies.</Description>
+		<PackageId>NetDevPack.SimpleMediator.Wsdl.Fork</PackageId>
+		<Authors>Igor E. Silva</Authors>
+		<Company>Wsdl</Company>
+		<Description>Fork of NetDevPack.SimpleMediator with custom improvements.</Description>
 		<PackageDescription>Simple mediator implementation in .NET, In-process messaging with no dependencies.</PackageDescription>
-		<PackageProjectUrl>https://github.com/EduardoPires/NetDevPack</PackageProjectUrl>		
+		<PackageProjectUrl>https://github.com/igoreusttaquio/SimpleMediator</PackageProjectUrl>		
 		<PackageIcon>IconNuget.png</PackageIcon>
-		<RepositoryUrl>https://github.com/NetDevPack/SimpleMediator</RepositoryUrl>
+		<RepositoryUrl>https://github.com/igoreusttaquio/SimpleMediator</RepositoryUrl>
 		<RepositoryType>Public</RepositoryType>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<Version>1.2.0</Version>
+		<Version>2.0.0</Version>
 		<Title>NetDevPack.SimpleMediator</Title>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageTags>Mediator, MediatR</PackageTags>
