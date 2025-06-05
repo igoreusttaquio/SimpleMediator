@@ -10,14 +10,16 @@ namespace NetDevPack.SimpleMediator
     {
         public static IServiceCollection AddSimpleMediator(
         this IServiceCollection services,
+        ServiceLifetime lifetimeHandler = ServiceLifetime.Scoped,
         params object[] args)
         {
             var assemblies = ResolveAssemblies(args);
 
-            services.AddSingleton<IMediator, Mediator>();
+            var descriptor = new ServiceDescriptor(typeof(IMediator), typeof(Mediator), lifetimeHandler);
+            services.Add(descriptor);
 
-            RegisterHandlers(services, assemblies, typeof(INotificationHandler<>));
-            RegisterHandlers(services, assemblies, typeof(IRequestHandler<,>));
+            RegisterHandlers(services, assemblies, typeof(INotificationHandler<>), lifetimeHandler);
+            RegisterHandlers(services, assemblies, typeof(IRequestHandler<,>), lifetimeHandler);
 
             return services;
         }
@@ -54,7 +56,7 @@ namespace NetDevPack.SimpleMediator
         }
 
 
-        private static void RegisterHandlers(IServiceCollection services, Assembly[] assemblies, Type handlerInterface)
+        private static void RegisterHandlers(IServiceCollection services, Assembly[] assemblies, Type handlerInterface, ServiceLifetime serviceLifetime)
         {
             var types = assemblies.SelectMany(a => a.GetTypes())
                 .Where(t => t.IsClass && !t.IsAbstract)
@@ -69,7 +71,8 @@ namespace NetDevPack.SimpleMediator
 
                 foreach (var iface in interfaces)
                 {
-                    services.AddTransient(iface, type);
+                    var descriptor = new ServiceDescriptor(iface, type, serviceLifetime);
+                    services.Add(descriptor);
                 }
             }
         }
