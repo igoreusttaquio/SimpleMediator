@@ -124,7 +124,7 @@ services.AddTransient<INotificationHandler<CustomerCreatedEvent>, SendWelcomeEma
 Or use assembly scanning with:
 
 ```csharp
-services.AddSimpleMediator();
+services.AddSimpleMediator(ServiceLifetime.Scoped, typeof(DependencyInjection).Assembly);
 ```
 
 ---
@@ -169,6 +169,63 @@ This structure cleanly separates **commands** (which change state and return a r
 
 NetDevPack.SimpleMediator targets .NET Standard 2.1, and is compatible with .NET Core 3.1+, .NET 5+, .NET 6+, .NET 7+, .NET 8, and newer versions of the .NET runtime.
 
-## About
+---
+# 📦 Release 3.0.0 — Pipeline Behaviors Support & Breaking Changes
 
-NetDevPack.SimpleMediator was developed by [Eduardo Pires](https://desenvolvedor.io) under the MIT license.
+## 🚨 Breaking Changes
+
+This release introduces **`PipelineBehaviors` support**, which required internal structural changes to the request processing pipeline. Please review your registration and handler setup to ensure compatibility.
+
+If you're upgrading from a previous version, make sure:
+
+- You re-register handlers and pipeline behaviors using `services.AddSimpleMediator(...)` correctly.
+- Custom behavior logic aligns with the new `IPipelineBehavior<TRequest, TResponse>` interface.
+
+---
+
+## ✨ New: Pipeline Behaviors Support
+
+SimpleMediator now supports `PipelineBehaviors`, enabling you to intercept and extend the execution pipeline of requests and notifications — similar to what's available in MediatR.
+
+This allows scenarios such as:
+
+- ✅ Request validation (e.g., with FluentValidation)
+- ✅ Logging and tracing
+- ✅ Performance measurement
+- ✅ Authorization checks
+- ✅ Error handling
+
+### Example: Creating a Logging Behavior
+
+```csharp
+public class LoggingBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
+{
+    public async Task<TResponse> Handle(
+        TRequest request,
+        CancellationToken cancellationToken,
+        RequestHandlerDelegate<TResponse> next)
+    {
+        Console.WriteLine($"[Log] Handling {typeof(TRequest).Name}");
+        var response = await next(cancellationToken);
+        Console.WriteLine($"[Log] Handled {typeof(TRequest).Name}");
+        return response;
+    }
+}
+```
+### Registering Behaviors
+
+```csharp
+services.AddTransient(typeof(IPipelineBehavior<,>), typeof(LoggingBehavior<,>));
+```
+Multiple behaviors can be registered and are executed in the order they are registered in the container.
+
+### 🧪 FluentValidation Integration Example
+
+```csharp 
+services.AddValidatorsFromAssemblyContaining<MyValidator>();
+services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
+
+```
+## About
+> `NetDevPack.SimpleMediator` was originally developed by [Eduardo Pires](https://desenvolvedor.io) under the MIT license.  
+> **Note:** This project is a **fork** intended to introduce specific improvements.
